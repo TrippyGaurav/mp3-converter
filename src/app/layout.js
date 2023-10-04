@@ -1,3 +1,4 @@
+import Schema from "./Schema";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -11,9 +12,16 @@ export const metadata = {
     title: "  Youtube to MP3 Converter:Your Video to Audio Conversion tool",
     description:
       "Downloading YouTube videos for songs has been made easy. Find the best Youtube to MP3 Converter for easily converting your MP4 into high-quality MP3",
-    url: "https://www.youtubeparty.com/mp-3-converter",
+    url: "https://www.youtubetomp3converter.world/",
     type: "website",
-    image: "https://www.youtubeparty.com/main-logo.svg",
+    image: "https://www.youtubetomp3converter.world/main-logo.svg",
+  },
+  metadataBase: new URL("https://www.youtubetomp3converter.world/"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+    },
   },
 };
 export default function RootLayout({ children }) {
@@ -21,9 +29,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" type="image/x-icon" href="/logo.svg" />
-        <link rel="canonical" href="https://www.youtubeparty.com/" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Schema /> {children}
+      </body>
     </html>
   );
 }
