@@ -6,11 +6,12 @@ export default function Home() {
     <main className={styles[`mp4-downloader`]}>
       <div className={styles.hero}>
         <div className={styles.container}>
-          <h1>
-            <span>Youtube to MP3 Converter</span>
-            <br />
-            Your Video to Audio Conversion tool
-          </h1>
+          <h1>Youtube to MP3 Converter</h1>
+          <h2> Your Video to Audio Conversion tool</h2>
+
+          <div className={styles[`image-container`]}>
+            <Image src={`/button.png`} fill className={styles.image} />
+          </div>
 
           <div id="mouse-scroll" className={styles.mouse}>
             <div className="mouse">
@@ -28,7 +29,7 @@ export default function Home() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.para}>
-            <h2>Website Content</h2>
+            <h3>Website Content</h3>
             <p>
               YouTube has become a part of every internet user&apos;s life. You
               can watch videos, movies, series and even listen to the latest
@@ -42,7 +43,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.para}>
-            <h2>Youtube</h2>
+            <h3>Youtube</h3>
             <p>
               It is people’s go-to entertainment platform which serves everyone
               irrespective of their age or gender. Satisfying the needs of kids
@@ -56,7 +57,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.para}>
-            <h2>Video and Audio Formats</h2>
+            <h3>Video and Audio Formats</h3>
             <p>
               Most conversion tools allow you to convert the content into many
               formats. The video link can be downloaded in any format like mp4,
@@ -67,7 +68,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.para}>
-            <h2>How to download a video</h2>
+            <h3>How to download a video</h3>
             <p>
               It&apos;s very easy for anyone to download a video using online
               tools.
@@ -93,7 +94,7 @@ export default function Home() {
             </ul>
           </div>
           <div className={styles.para}>
-            <h2>How to Convert video to mp3</h2>
+            <h3>How to Convert video to mp3</h3>
             <p>
               Free YouTube to mp3 converter tool allows you to convertidor
               YouTube mp3 formats online.
@@ -126,14 +127,14 @@ export default function Home() {
             </ul>
           </div>
           <div className={styles.para}>
-            <h2>Advantages of YTMP3</h2>
+            <h3>Advantages of YTMP3</h3>
             <p>
               Along with its immense popularity, YTMP3 provides several
               advantages that make the process easier and faster.
             </p>
           </div>
           <div className={styles.para}>
-            <h2>Convenient and user-friendly</h2>
+            <h3>Convenient and user-friendly</h3>
             <p>
               Users are provided with a convenient and user-friendly conversion
               process to have their mp4 videos converted and downloaded into mp3
@@ -142,7 +143,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.para}>
-            <h2>Swift conversions</h2>
+            <h3>Swift conversions</h3>
             <p>
               The efficient algorithm of the platform ensures a fast conversion
               process. The desired mp3 formats are provided according to the
@@ -150,7 +151,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.para}>
-            <h2>Available across different devices</h2>
+            <h3>Available across different devices</h3>
             <p>
               You can convert and download videos to audio through any device
               using an online mp3 converter tool. YTMP3 offers compatibility,
@@ -160,7 +161,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.para}>
-            <h2>Conclusion</h2>
+            <h3>Conclusion</h3>
             <p>
               If you are still paying money to listen to or watch things offline
               or to download on YouTube, then it is time you stop that. With the

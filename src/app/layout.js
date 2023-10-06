@@ -14,7 +14,7 @@ export const metadata = {
       "Downloading YouTube videos for songs has been made easy. Find the best Youtube to MP3 Converter for easily converting your MP4 into high-quality MP3",
     url: "https://www.youtubetomp3converter.world/",
     type: "website",
-    image: "https://www.youtubetomp3converter.world/main-logo.svg",
+    image: "https://www.youtubetomp3converter.world/logo.png",
   },
   metadataBase: new URL("https://www.youtubetomp3converter.world/"),
   alternates: {
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/x-icon" href="/logo.svg" />
+        <link rel="icon" type="image/x-icon" href="/logo.png" />
       </head>
       <body className={inter.className}>
         <Schema /> {children}

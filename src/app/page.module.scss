@@ -19,11 +19,14 @@ $large: 1024px;
   }
 }
 
+.mp4-downloader::-webkit-scrollbar {
+  display: none;
+}
 
 .mp4-downloader{
-  background: rgb(2,0,36);
-  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%, rgba(0,0,0,1) 100%); 
-  color: white;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  color: #111;
 
   .hero{
     height: 50vh;
@@ -41,8 +44,12 @@ $large: 1024px;
     .container{
       height: 100%;
 
-      background: rgb(0,0,34);
-      background: linear-gradient(0deg, rgba(0,0,34,1) 0%, rgba(9,9,121,0.33375348430387786) 100%); 
+     background: rgb(0,0,0);
+    background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.33375348430387786) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.33375348430387786) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.33375348430387786) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1); 
+
       display: flex;
       align-items: center;
       justify-content: center;
@@ -53,34 +60,64 @@ $large: 1024px;
       }
   
       h1{
-        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        font-weight: bold;
         text-align: center;
-        z-index: 9;
-        font-weight: normal;
-
-        @include for-greater-than-medium(){
-          font-size: 5rem;
-        }
-
-        @include for-greater-than-larger(){
-          font-size: 7rem;
-        }
-
-        span{
-          text-transform: uppercase;
-          font-size: 3.5rem;
-          font-weight: bold;
-
+        color: white;
           @include for-greater-than-medium(){
-            font-size: 8rem;
+            font-size: 6.5rem;
           }
 
           @include for-greater-than-larger(){
-            font-size: 8rem;
+            font-size: 7rem;
           }
-        }
-  
       }
+
+      h2{
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: normal;
+        color: white;
+
+
+          @include for-greater-than-medium(){
+            font-size: 3.8rem;
+          }
+
+          @include for-greater-than-larger(){
+            font-size: 4rem;
+          }
+      }
+
+      .image-container {
+        width: 40vw;
+        cursor: pointer;
+        background-color: white;
+        padding: 0rem 2rem;
+        border-radius: 5rem;
+      
+        > div {
+          position: unset !important;
+        }
+      
+        .image {
+          object-fit: contain;
+          width: 100% !important;
+          position: relative !important;
+          height: unset !important;
+        }
+
+        @include for-greater-than-medium(){
+          width: 30vw;
+          cursor: pointer;
+          // background-color: white;
+          padding: 0rem 4rem;
+          border-radius: 7rem;
+        }
+      }
+      
 
       .mouse{
         display: none;
@@ -98,8 +135,8 @@ $large: 1024px;
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    background: rgb(0,0,34);
-    background: linear-gradient(180deg, rgba(0,0,34,1) 0%, rgba(9,9,121,0.33375348430387786) 100%); 
+    background: whitesmoke;
+    color: #111;
     padding: 2rem;
 
     @include for-greater-than-medium(){
@@ -121,11 +158,11 @@ $large: 1024px;
         gap: 1rem;
 
         h3{
-          text-align: center;
+          text-align: left;
           font-size: 2rem;
 
           @include for-greater-than-medium(){
-            font-size: 4rem;
+            font-size: 3rem;
           }
         }
 
