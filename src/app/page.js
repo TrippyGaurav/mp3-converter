@@ -10,7 +10,12 @@ export default function Home() {
           <h2> Your Video to Audio Conversion tool</h2>
 
           <div className={styles[`image-container`]}>
-            <Image src={`/button.png`} fill className={styles.image} />
+            <Image
+              src={`/button.png`}
+              fill
+              className={styles.image}
+              alt="Youtube to MP3 Converter"
+            />
           </div>
 
           <div id="mouse-scroll" className={styles.mouse}>
