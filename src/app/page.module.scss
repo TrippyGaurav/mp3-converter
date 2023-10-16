@@ -24,8 +24,8 @@ $large: 1024px;
 }
 
 .mp4-downloader{
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
   color: #111;
 
   .hero{
@@ -112,7 +112,6 @@ $large: 1024px;
         @include for-greater-than-medium(){
           width: 30vw;
           cursor: pointer;
-          // background-color: white;
           padding: 0rem 4rem;
           border-radius: 7rem;
         }
