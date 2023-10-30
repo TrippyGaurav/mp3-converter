@@ -1,0 +1,114 @@
+$smaller: 480px;
+$medium: 768px;
+$large: 1024px;
+
+@mixin for-greater-than-smaller {
+  @media (min-width: $smaller) {
+    @content;
+  }
+}
+
+@mixin for-greater-than-medium {
+  @media (min-width: $medium) {
+    @content;
+  }
+}
+@mixin for-greater-than-larger {
+  @media (min-width: $large) {
+    @content;
+  }
+}
+
+
+.header{
+    .container{
+        nav{
+            padding: 4rem;
+            .image-container {
+                width: 4rem;
+                
+                @include for-greater-than-smaller(){
+                    width: 7rem;
+                }
+                cursor: pointer;
+               
+              
+                > div {
+                  position: unset !important;
+                }
+              
+                .image {
+                  object-fit: contain;
+                  width: 100% !important;
+                  position: relative !important;
+                  height: unset !important;
+                }
+            }
+        }
+        main{
+            height: 100vh;
+            background: url('/header-bg.svg');
+            background-position: top;
+            background-size: cover;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            color: white;
+
+            .titles{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 2rem;
+                h1{
+                    font-size: 3.5rem;
+                    text-align: center;
+
+                    @include for-greater-than-smaller(){
+                        font-size: 4rem;
+                    }
+
+                    @include for-greater-than-medium(){
+                        font-size: 5rem;
+                    }
+
+                    @include for-greater-than-larger(){
+                        font-size: 7rem;
+                    }
+                }
+                h2{
+                    text-align: center;
+                    color: #D33434;
+                    font-size: 1.5rem;
+
+
+                    @include for-greater-than-smaller(){
+                        font-size: 2rem;
+                    }
+
+                    @include for-greater-than-medium(){
+                        font-size: 3rem;
+                    }
+                    @include for-greater-than-larger(){
+                        font-size: 4rem;
+                    }
+
+                }
+
+                .mp3-img{
+                    // border: 1px solid red;
+                    width:10rem;
+
+                    @include for-greater-than-medium(){
+                        width: 12rem;
+                    }
+
+                    @include for-greater-than-medium(){
+                        width: 15rem;
+                    }
+                }
+            }
+        }
+    }
+}
